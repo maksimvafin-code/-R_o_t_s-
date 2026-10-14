@@ -1,6 +1,6 @@
 описание игры -R_o_t_s-: (RU)
 
-Цель игрока — нажимать на плиты в нужный момент. В зависимости от точности нажатия ему начисляются очки. В конце уровня очки подсчитываются, и игрок получает оценку от 1 до 4 в зависимости от набранного количества очков. Помимо уже доступных песен, игрок сможет добавлять свои. В будущем появятся различные модификаторы, например «ядовитые плиты», которые будут постепенно отнимать очки.
+Цель игрока — нажимать на плиты в нужный момент. В зависимости от точности нажатия ему начисляются очки. В конце уровня очки подсчитываются, и игрок получает оценку от 1 до 4 в зависимости от набранного количества очков. Помимо уже доступных песен, игрок сможет добавлять свои. В будущем появятся различные "модификаторы", например «ядовитые плиты», которые будут постепенно отнимать очки.
 
 этапы разработки:
 1) "Ядро"
@@ -14,7 +14,7 @@
 
    Game description -R_o_t_s-: (EN)
 
-The player’s goal is to press the tiles at the right moment. Points are awarded depending on the accuracy of the press. At the end of the level, the points are tallied, and the player receives a score from 1 to 4, depending on the number of points accumulated. In addition to the songs already available, the player will be able to add their own. In the future, various modifiers will appear, for example, “poisoned tiles,” which will gradually deduct points.
+The player’s goal is to press the tiles at the right moment. Points are awarded depending on the accuracy of the press. At the end of the level, the points are tallied, and the player receives a score from 1 to 4, depending on the number of points accumulated. In addition to the songs already available, the player will be able to add their own. In the future, various "modifiers" will appear, for example, “poisoned tiles,” which will gradually deduct points.
 
 Development stages: 
 1) “Core”
