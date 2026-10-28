@@ -16,7 +16,7 @@
 * игровой движок: Unity
 * язык программирования: С#
 * приложение для создания моделей: Blender (v5.2.2)
-* приложения для поиска информации: YouTube канал () , Google,
+* приложения для поиска информации: YouTube канал "Школа itProger / программирование" , Google, deepseek.
 
 Game description -R_o_t_s-: (EN)
 
@@ -36,6 +36,7 @@ Development tools:
 * Game engine: Unity
 * Programming language: C#
 * 3D modeling software: Blender (v5.2.2)
+* applications for finding information: the "Школа itProger / программирование" (itProger School / Programming) YouTube channel, Google, DeepSeek.
 
 游戏说明 -R_o_t_s-: (CN)
 
@@ -55,3 +56,4 @@ Development tools:
 * 游戏引擎：Unity
 * 编程语言：C#
 * 3D 建模软件：Blender (v5.2.2)
+* 查找信息的应用程序：“Школа itProger / программирование”（itProger 学校/编程）YouTube 频道、Google、DeepSeek。
