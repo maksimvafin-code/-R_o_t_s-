@@ -13,34 +13,44 @@
    добавление функции "отклика окружения" - возможность игры реагировать на музыку или нажатия плиток.
 
 иснрументы разработки:
-* игровой движок - Unity
-* язык программирования - С#
-* приложение для создания моделей - Blender (v5.2.2)
+* игровой движок: Unity
+* язык программирования: С#
+* приложение для создания моделей: Blender (v5.2.2)
 
 Game description -R_o_t_s-: (EN)
 
-The player’s goal is to press the plates at the right moment. Points are awarded depending on the accuracy of the press. At the end of the level, the points are counted, and the player receives a grade from 1 to 4 depending on the number of points accumulated. In addition to the songs already available, the player will be able to add their own. In the future, various “modifiers” will appear, for example, “poisonous plates” that will gradually deduct points.
+The player's goal is to tap on tiles at the right moment. Points are awarded based on the precision of each tap. At the end of a level, the points are tallied, and the player receives a grade from 1 to 4, depending on their total score. In addition to the pre-existing songs, players can add their own. Future updates will introduce various "modifiers"—such as "poison tiles"—that will gradually deduct points.
 
 Development stages:
-1) “Core”
-building the game’s basic functions: time tracking, detecting key presses, integrating “demo scenes”, debugging previous stages.
-2) “music”
-integrating music into the game, configuring the code for displaying tiles, debugging previous stages.
-3) “additional features”
-integrating “modifiers” into the game to make the gameplay more challenging (the player can enable them if they wish), adding the ability to change game scenes, adding settings, integrating the “score” system.
-4) “response”
-Adding the “environmental response” feature — the game’s ability to react to music or press…
+1) "Core"
+   Building the game's fundamental functions: time tracking, key-press detection, integration of a "demo scene," and debugging of previous stages.
+2) "Music"
+   Integrating music into the game, configuring the code for tile rendering, and debugging of previous stages.
+3) "Additional features"
+   Integrating "modifiers" to increase gameplay complexity (optional for the player), adding the ability to switch between game scenes, implementing settings, and integrating a scoring system.
+4) "Responsiveness"
+   Adding an "environmental response" feature—enabling the game to react to music or tile presses.
 
-游戏介绍-R_o_t_s-:(ZH)
+Development tools:
+* Game engine: Unity
+* Programming language: C#
+* 3D modeling software: Blender (v5.2.2)
 
-玩家的目标是在正确的时刻点击瓷砖。 根据点击的准确性，点被授予他。 在水平结束时，点数被计算，玩家获得从1到4的分数，这取决于得分的数量。 除了已经可用的歌曲，播放器将能够添加自己的。 未来会出现各种"修饰符"，比如"毒盘"，会逐渐带走积分。
+游戏说明 -R_o_t_s-: (CN)
 
-发展阶段:
-1）"核心"
-是游戏基本功能的构建：时间跟踪，击键检测，"演示场景"的集成，以前阶段的调试。
-2）"音乐"
-将音乐集成到游戏中，设置显示瓷砖的代码，调试以前的阶段。
-3)"附加功能"
-将"修饰符"集成到游戏中以使游戏玩法复杂化（可以根据玩家的要求打开它们），添加更改游戏场景的功能，添加设置，集成"帐户"系统。
-4)"回应"
-添加"环境响应"功能-游戏响应音乐或敲击的能力
+玩家的目标是在合适的时机点击方块。系统会根据每次点击的精准度给予相应分数。关卡结束时，系统将统计总分，并据此给予玩家 1 到 4 级的评分。除了游戏内置的曲目外，玩家还可以添加自己的音乐。未来的更新将引入各种“修饰元素”（例如“毒方块”），这些元素会导致分数逐渐扣减。
+
+开发阶段：
+1) “核心” (Core)
+   构建游戏的基础功能：时间追踪、按键检测、集成“演示场景”，以及对先前阶段进行调试。
+2) “音乐” (Music)
+   将音乐整合至游戏中，配置方块渲染相关的代码，并对先前阶段进行调试。
+3) “附加功能” (Additional features)
+   引入“修饰符”(modifiers) 以增加游戏玩法的复杂性（玩家可选择是否启用），添加游戏场景切换功能，实现设置系统，并集成计分系统。
+4) “响应性” (Responsiveness)
+   添加“环境响应”功能——使游戏能够根据音乐或方块按压操作做出动态反馈。
+
+开发工具：
+* 游戏引擎：Unity
+* 编程语言：C#
+* 3D 建模软件：Blender (v5.2.2)
