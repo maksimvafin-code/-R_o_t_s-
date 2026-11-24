@@ -1,21 +1,21 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Antal" at "2026-11-24T12:00:34.0059736Z"
 Built from '6000.6/staging' branch; Version is '6000.6.7f1 (b22767f04f04) revision 11675495'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Antal" at "2026-11-23T10:30:37.24463Z"
 OS: 'Windows 11  (10.0.26100) Professional' Language: 'ru' Physical Memory: 32609 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-11-23T10:30:37Z
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 6660, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+Date: 2026-11-24T12:00:34Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 20244, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.3+d7ffd15
-  Session Id:              3715b61147d64153a6138fb0ae6a6385
-  Correlation Id:          f23c5675e9d6216d90be4e67b05b973b
-  External correlation Id: 6561063402678907016
+  Session Id:              820c99ff05e7453dbb07aa15a8781b18
+  Correlation Id:          4e2ccc3132230c144ed248cbd7f0fe41
+  External correlation Id: 3671444887376091144
   Machine Id:              e9ih69JPelM4n6hd6phMSfALg4w=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Antal" (connect: 0.00s, validation: 0.00s, handshake: 0.05s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Antal-notifications" at "2026-11-23T10:30:37.2922276Z"
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Antal" (connect: 0.00s, validation: 0.00s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Antal-notifications" at "2026-11-24T12:00:34.0521468Z"
 [Licensing::Module] Licensing Background thread has ended after 0.05s
 
 COMMAND LINE ARGUMENTS:
@@ -30,9 +30,9 @@ D:/-R_o_t_s-
 -logFile
 Logs/AssetImportWorkerHW1.log
 -srvPort
-53835
+59047
 -parentPid
-20420
+10728
 -analyticsCloudUserId
 9072467147606
 -analyticsCloudProjectId
@@ -96,16 +96,17 @@ D:/-R_o_t_s-
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [5772]  Target information:
+Player connection [14892]  Target information:
 
-Player connection [5772]  * "[IP] 192.168.0.10 [Port] 0 [Flags] 2 [Guid] 1890062329 [EditorId] 1890062329 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E60FNFB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [14892]  * "[IP] 192.168.0.10 [Port] 0 [Flags] 2 [Guid] 2914747857 [EditorId] 2914747857 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E60FNFB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [5772] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [5772] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14892] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [14892] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
 Initialising UDS system complete:
   - System type: Client
   - Resource namespace: fbe2f30fa64c6b6f5cc15df78e5e452e
@@ -115,8 +116,7 @@ Initialising UDS system complete:
   - Hashmap size: 4194304
   - Service connected: true
   - Service working directory: Library/DataStore/
-Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 2.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.94 ms, found 3 plugins.
 [Physics::Module] Selected backend (deferred post-plugins).
 [Physics::Module] Name: PhysX
 [Physics::Module] Id: 0xf2b8ea05
@@ -142,7 +142,7 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/Managed
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56504
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -156,7 +156,7 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.7f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
 [Licensing::Client] Successfully resolved entitlement details
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.006048 seconds.
+Registered in 0.005719 seconds.
 Native extension for Android target not found
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
@@ -166,30 +166,29 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  0.525 seconds
-Domain Reload Profiling: 1074ms
-	BeginReloadAssembly (129ms)
+- Finished resetting the current domain, in  0.505 seconds
+Domain Reload Profiling: 1017ms
+	BeginReloadAssembly (117ms)
 	RebuildCommonClasses (5ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (72ms)
-	LoadAllAssembliesAndSetupDomain (327ms)
-		LoadAssemblies (127ms)
-		TypeCache.Refresh (223ms)
-			TypeCache.ScanAssembly (208ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (310ms)
+		LoadAssemblies (115ms)
+		TypeCache.Refresh (206ms)
+			TypeCache.ScanAssembly (192ms)
 		AnalyzeDomain (1ms)
-	FinalizeReload (526ms)
+	FinalizeReload (506ms)
 		SetupLoadedEditorAssemblies (0ms)
 			InitializePlatformSupportModulesInManaged (7ms)
-			BeforeProcessingInitializeOnLoad (206ms)
-			ProcessInitializeOnLoadAttributes (101ms)
-			ProcessInitializeOnLoadMethodAttributes (125ms)
+			BeforeProcessingInitializeOnLoad (184ms)
+			ProcessInitializeOnLoadAttributes (92ms)
+			ProcessInitializeOnLoadMethodAttributes (135ms)
 Initializing Unity extensions:
 [Licensing::Client] Successfully resolved entitlement details
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-Editor requested this worker to shutdown with reason: Editor is closing down
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 Native extension for Android target not found
@@ -200,38 +199,46 @@ Native extension for WindowsStandalone target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  1.027 seconds
-Domain Reload Profiling: 1880ms
-	BeginReloadAssembly (218ms)
+- Finished resetting the current domain, in  1.050 seconds
+Domain Reload Profiling: 1834ms
+	BeginReloadAssembly (206ms)
 		DisableScriptedObjects (9ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (10ms)
-	RebuildNativeTypeToScriptingClass (16ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (17ms)
 	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (557ms)
-		LoadAssemblies (367ms)
-		TypeCache.Refresh (134ms)
-			TypeCache.ScanAssembly (116ms)
-		AnalyzeDomain (40ms)
-			BuildScriptInfoCaches (36ms)
-	FinalizeReload (1028ms)
+	LoadAllAssembliesAndSetupDomain (502ms)
+		LoadAssemblies (287ms)
+		TypeCache.Refresh (142ms)
+			TypeCache.ScanAssembly (127ms)
+		AnalyzeDomain (39ms)
+			BuildScriptInfoCaches (35ms)
+	FinalizeReload (1051ms)
 		SetupLoadedEditorAssemblies (0ms)
 			InitializePlatformSupportModulesInManaged (12ms)
-			BeforeProcessingInitializeOnLoad (129ms)
-			ProcessInitializeOnLoadAttributes (323ms)
-			ProcessInitializeOnLoadMethodAttributes (101ms)
+			BeforeProcessingInitializeOnLoad (162ms)
+			ProcessInitializeOnLoadAttributes (344ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
 			AfterProcessingInitializeOnLoad (6ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
 AcceleratorClientConnectionCallback - disconnected - :0
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4688 unused Assets / (9.9 MB). Loaded Objects now: 5588.
-Memory consumption went from 307.5 MB to 297.6 MB.
-Total: 13.594600 ms (FindLiveObjects: 1.076000 ms CreateObjectMapping: 0.530900 ms MarkObjects: 7.937500 ms  DeleteObjects: 3.794000 ms)
+Unloading 4706 unused Assets / (11.1 MB). Loaded Objects now: 5601.
+Memory consumption went from 314.2 MB to 303.1 MB.
+Total: 12.791300 ms (FindLiveObjects: 1.392900 ms CreateObjectMapping: 0.561400 ms MarkObjects: 7.102800 ms  DeleteObjects: 3.448500 ms)
 
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Unloading 64 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (6.0 MB). Loaded Objects now: 5601.
+Memory consumption went from 308.2 MB to 302.1 MB.
+Total: 10.187400 ms (FindLiveObjects: 0.805100 ms CreateObjectMapping: 0.198700 ms MarkObjects: 6.602900 ms  DeleteObjects: 2.329300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
 AcceleratorClientConnectionCallback - disconnected - :0
 AssetImportWorker is now disconnected from the server
 Process exiting
-Curl error 42: Callback aborted
-Curl error 42: Callback aborted
 [ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0
