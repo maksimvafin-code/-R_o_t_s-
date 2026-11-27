@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\-R_o_t_s-\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\-r_o_t_s-\\assets\\script\\holdtodelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\holdtodelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\-r_o_t_s-\\assets\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "HoldToDelete.cs",
+              "DocumentMoniker": "D:\\-R_o_t_s-\\Assets\\Script\\HoldToDelete.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\HoldToDelete.cs",
+              "ToolTip": "D:\\-R_o_t_s-\\Assets\\Script\\HoldToDelete.cs",
+              "RelativeToolTip": "Assets\\Script\\HoldToDelete.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T05:28:57.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FindMissingScripts.cs",
               "DocumentMoniker": "D:\\-R_o_t_s-\\Assets\\Editor\\FindMissingScripts.cs",
               "RelativeDocumentMoniker": "Assets\\Editor\\FindMissingScripts.cs",
@@ -34,13 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "D:\\-R_o_t_s-\\Assets\\Script\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MainMenu.cs",
               "ToolTip": "D:\\-R_o_t_s-\\Assets\\Script\\MainMenu.cs",
               "RelativeToolTip": "Assets\\Script\\MainMenu.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAswLAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAkwOIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-23T09:16:59.377Z",
               "EditorCaption": ""

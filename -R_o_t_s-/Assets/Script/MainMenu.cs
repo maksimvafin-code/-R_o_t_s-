@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.IO;
 using System.Collections;
-using SFB; // Наш плагин
-using TMPro;
+using SFB; // Плагин StandaloneFileBrowser
+using TMPro; // TextMeshPro
 
 public class MainMenu : MonoBehaviour
 {
@@ -16,36 +16,48 @@ public class MainMenu : MonoBehaviour
 
     [Header("Элементы интерфейса")]
     public GameObject gameTitle;
+    public GameObject trackListPanel; // <--- НАШ ОТДЕЛЬНЫЙ СПИСОК ТРЕКОВ
 
     [Header("Элементы настроек")]
     public Slider volumeSlider;
     public Toggle fullscreenToggle;
+    public GameObject saveSettingsButton;
 
     [Header("Меню выбора трека")]
-    public Transform contentParent;        // Перетащим Content
-    public GameObject trackButtonPrefab;   // Перетащим префаб кнопки
-    public Button playSelectedButton;      // Кнопка "Играть"
-    public AudioSource audioSource;        // Источник звука
+    public Transform contentParent;
+    public GameObject trackButtonPrefab;
+    public Button playSelectedButton;
+    public AudioSource audioSource;
 
     private string tracksFolderPath;
     private string selectedTrackPath;
 
     void Start()
     {
-        // Папка для хранения треков
+        // Создаем папку для треков
         tracksFolderPath = Path.Combine(Application.persistentDataPath, "CustomTracks");
         if (!Directory.Exists(tracksFolderPath))
             Directory.CreateDirectory(tracksFolderPath);
 
+        // Скрываем то, что не должно быть видно при старте
         playSelectedButton.gameObject.SetActive(false);
+        if (trackListPanel != null) trackListPanel.SetActive(false);
+
         LoadSettings();
         RefreshTrackList();
     }
 
+    // ==========================================
+    // --- ГЛАВНОЕ МЕНЮ ---
+    // ==========================================
     public void OnPlayButtonClicked()
     {
         mainMenuPanel.SetActive(false);
         trackSelectionPanel.SetActive(true);
+
+        // ВКЛЮЧАЕМ СПИСОК ТРЕКОВ
+        if (trackListPanel != null) trackListPanel.SetActive(true);
+
         gameTitle.SetActive(false);
         playSelectedButton.gameObject.SetActive(false);
         RefreshTrackList();
@@ -56,32 +68,56 @@ public class MainMenu : MonoBehaviour
         mainMenuPanel.SetActive(false);
         settingsPanel.SetActive(true);
         gameTitle.SetActive(false);
+        saveSettingsButton.SetActive(false);
     }
 
-    public void OnSettingsBackButtonClicked()
+    // ==========================================
+    // --- НАСТРОЙКИ ---
+    // ==========================================
+    public void OnVolumeChanged(float value)
+    {
+        AudioListener.volume = value;
+        saveSettingsButton.SetActive(true);
+    }
+
+    public void OnFullscreenToggled(bool isFullscreen)
+    {
+        Screen.fullScreenMode = isFullscreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
+        saveSettingsButton.SetActive(true);
+    }
+
+    public void OnSaveSettingsClicked()
     {
         PlayerPrefs.SetFloat("GameVolume", volumeSlider.value);
         PlayerPrefs.SetInt("IsFullscreen", fullscreenToggle.isOn ? 1 : 0);
         PlayerPrefs.Save();
+        saveSettingsButton.SetActive(false);
+    }
 
+    public void OnSettingsBackButtonClicked()
+    {
+        LoadSettings();
         settingsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
         gameTitle.SetActive(true);
     }
 
-    public void OnVolumeChanged(float value) { AudioListener.volume = value; }
-    public void OnFullscreenToggled(bool isFullscreen) { Screen.fullScreen = isFullscreen; }
-
+    // ==========================================
+    // --- МЕНЮ ВЫБОРА ТРЕКА ---
+    // ==========================================
     public void OnBackButtonClicked()
     {
         trackSelectionPanel.SetActive(false);
+
+        // ВЫКЛЮЧАЕМ СПИСОК ТРЕКОВ
+        if (trackListPanel != null) trackListPanel.SetActive(false);
+
         mainMenuPanel.SetActive(true);
         gameTitle.SetActive(true);
         audioSource.Stop();
         playSelectedButton.gameObject.SetActive(false);
     }
 
-    // 🟢 ДОБАВЛЕНИЕ ТРЕКА
     public void OnAddTrackButtonClicked()
     {
         var extensions = new[] { new ExtensionFilter("MP3 Files", "mp3") };
@@ -94,16 +130,18 @@ public class MainMenu : MonoBehaviour
             string destinationPath = Path.Combine(tracksFolderPath, fileName);
 
             File.Copy(sourcePath, destinationPath, true);
+            Debug.Log($"Трек добавлен: {fileName}");
             RefreshTrackList();
         }
     }
 
-    // Обновление списка
     private void RefreshTrackList()
     {
+        // Очищаем старые кнопки
         foreach (Transform child in contentParent)
             Destroy(child.gameObject);
 
+        // Читаем файлы из папки
         string[] trackFiles = Directory.GetFiles(tracksFolderPath, "*.mp3");
 
         foreach (string filePath in trackFiles)
@@ -114,7 +152,7 @@ public class MainMenu : MonoBehaviour
             btnObj.GetComponentInChildren<TextMeshProUGUI>().text = fileName;
 
             Button btn = btnObj.GetComponent<Button>();
-            string pathToPlay = filePath; // Локальная переменная для правильного замыкания
+            string pathToPlay = filePath;
             btn.onClick.AddListener(() => OnTrackSelected(pathToPlay));
         }
     }
@@ -151,7 +189,13 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void OnExitButtonClicked() { confirmationPanel.SetActive(true); }
+    // ==========================================
+    // --- ВЫХОД ---
+    // ==========================================
+    public void OnExitButtonClicked()
+    {
+        confirmationPanel.SetActive(true);
+    }
 
     public void OnConfirmExitClicked()
     {
@@ -162,16 +206,22 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
-    public void OnCancelExitClicked() { confirmationPanel.SetActive(false); }
+    public void OnCancelExitClicked()
+    {
+        confirmationPanel.SetActive(false);
+    }
 
+    // ==========================================
+    // --- ЗАГРУЗКА НАСТРОЕК ---
+    // ==========================================
     private void LoadSettings()
     {
         float savedVolume = PlayerPrefs.GetFloat("GameVolume", 1f);
-        volumeSlider.value = savedVolume;
+        volumeSlider.SetValueWithoutNotify(savedVolume);
         AudioListener.volume = savedVolume;
 
         int savedFullscreen = PlayerPrefs.GetInt("IsFullscreen", 0);
-        fullscreenToggle.isOn = (savedFullscreen == 1);
-        Screen.fullScreen = (savedFullscreen == 1);
+        Screen.fullScreenMode = (savedFullscreen == 1) ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
+        fullscreenToggle.SetIsOnWithoutNotify(savedFullscreen == 1);
     }
 }
